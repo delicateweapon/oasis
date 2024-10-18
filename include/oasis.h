@@ -13,9 +13,10 @@ struct oasis_meta {
     SDL_Window *window;
     SDL_Renderer *renderer;
     bool initialized;
+    bool is_running;
 };
 extern struct oasis_meta OasisMeta;
 
 void oasis_init(OasisInitInfo *info);
-
+void oasis_run(void);
 void oasis_deinit(void);

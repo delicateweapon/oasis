@@ -9,6 +9,7 @@ struct oasis_meta OasisMeta = {
     .window = NULL,
     .renderer = NULL,
     .initialized = false,
+    .is_running = false,
 };
 
 void oasis_init(OasisInitInfo *info) {
