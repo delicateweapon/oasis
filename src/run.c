@@ -12,6 +12,8 @@ void oasis_run(void) {
     LOG_SWITCH("Running false -> true");
     SDL_Event event;
 
+    oasis_clear_screen(220, 90, 190, 255);
+
     while (OasisMeta.is_running) {
         while (SDL_PollEvent(&event)) {
             switch(event.type) {

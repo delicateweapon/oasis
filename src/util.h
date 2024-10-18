@@ -17,3 +17,5 @@
     fprintf(stdout, "[" ANSI_FG_GREEN "DEINIT" ANSI_RESET "] %s\n", message)
 #define LOG_SWITCH(message)                                                    \
     fprintf(stdout, "[" ANSI_FG_CYAN "SWITCH" ANSI_RESET "] %s\n", message)
+#define LOG_UPDATE(message)                                                    \
+    fprintf(stdout, "[" ANSI_FG_MAGENTA "UPDATE" ANSI_RESET "] %s\n", message)
