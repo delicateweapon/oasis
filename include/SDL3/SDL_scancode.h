@@ -352,7 +352,7 @@ typedef enum SDL_Scancode
      *
      *  There are way more keys in the spec than we can represent in the
      *  current scancode range, so pick the ones that commonly come up in
-     *  real world usage.
+     *  real OasisWorld usage.
      */
     /* @{ */
 

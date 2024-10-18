@@ -5,7 +5,8 @@
 
 void oasis_run(void) {
     if (!OasisMeta.initialized) {
-        LOG_ERROR("Cannot run the program when no initialization has beeen done");
+        LOG_ERROR(
+            "Cannot run the program when no initialization has beeen done");
     }
 
     OasisMeta.is_running = true;
@@ -16,7 +17,7 @@ void oasis_run(void) {
 
     while (OasisMeta.is_running) {
         while (SDL_PollEvent(&event)) {
-            switch(event.type) {
+            switch (event.type) {
             case SDL_EVENT_QUIT:
                 OasisMeta.is_running = false;
                 LOG_SWITCH("Running true -> false");
@@ -26,6 +27,7 @@ void oasis_run(void) {
                 handle_key_down(event.key);
             }
         }
+
     }
 }
 

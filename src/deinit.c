@@ -6,6 +6,8 @@ void oasis_deinit(void) {
         LOG_WARN("Cannot deinitialize oasis when it has not been initialized");
         return;
     }
+    OasisWorld_destroy_all(void);
+    LOG_DEINIT("All OasisWorlds destroyed");
     SDL_DestroyWindow(OasisMeta.window);
     LOG_DEINIT("Window");
     SDL_DestroyRenderer(OasisMeta.renderer);
