@@ -9,7 +9,7 @@ int main(void) {
     };
 
     oasis_init(&info);
-    printf("hello, world\n");
+    oasis_run();
     oasis_deinit();
 
     return 0;

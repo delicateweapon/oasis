@@ -9,6 +9,7 @@ void oasis_run(void) {
     }
 
     OasisMeta.is_running = true;
+    LOG_SWITCH("Running false -> true");
     SDL_Event event;
 
     while (OasisMeta.is_running) {
@@ -16,6 +17,8 @@ void oasis_run(void) {
             switch(event.type) {
             case SDL_EVENT_QUIT:
                 OasisMeta.is_running = false;
+                LOG_SWITCH("Running true -> false");
+                SDL_Event event;
                 break;
             case SDL_EVENT_KEY_DOWN:
                 handle_key_down(event.key);

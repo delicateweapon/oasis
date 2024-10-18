@@ -15,10 +15,24 @@ struct oasis_meta OasisMeta = {
 void oasis_init(OasisInitInfo *info) {
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS);
     LOG_INIT("SDL");
+
     OasisMeta.window = SDL_CreateWindow(info->window_title, info->window_width,
                                         info->window_height, SDL_WINDOW_OPENGL);
+    if (!OasisMeta.window) {
+        LOG_ERROR("Falied to create window");
+        SDL_Quit();
+        return;
+    }
     LOG_INIT("Window");
+
     OasisMeta.renderer = SDL_CreateRenderer(OasisMeta.window, NULL);
+    if (!OasisMeta.renderer) {
+        LOG_ERROR("Falied to create renderer");
+        SDL_DestroyWindow(OasisMeta.window);
+        SDL_Quit();
+        return;
+    }
     LOG_INIT("Renderer");
+
     OasisMeta.initialized = true;
 }
