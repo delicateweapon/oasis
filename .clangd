@@ -1,0 +1,2 @@
+CompileFlags:
+    Add: [-Iinclude, -I../include, -Wall, -Werror, -Wextra, -Wpedantic, -xc, -std=c2x]
